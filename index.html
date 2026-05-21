@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div id="tutorial-modal" class="modal">
+    <div class="modal-content">
+        <h2>Configurar Investigação</h2>
+        <div class="setup-form">
+            <input type="text" id="p1-name" placeholder="Nome Equipa 1" value="Equipa 1">
+            <input type="text" id="p2-name" placeholder="Nome Equipa 2" value="Equipa 2">
+            <input type="number" id="max-score" placeholder="Pontuação Alvo" value="20">
+        </div>
+        <div class="tutorial-legend">
+            <p>🟢 <strong>Normal:</strong> +1 Prestígio</p>
+            <p>🟡 <strong>Anomalia:</strong> -2 Prestígio</p>
+            <p>🔴 <strong>Crise:</strong> -3 Prestígio e recua 3 casas</p>
+            <p>🟣 <strong>Revolução:</strong> Transição científica</p>
+        </div>
+        <button class="btn-start" onclick="game.start()">COMEÇAR</button>
+    </div>
+</div>
+
+<div class="game-container">
+    <header>
+        <h1>Thomas Kuhn: <span>The Game</span></h1>
+        <div class="stats">
+            <div id="p1-score" class="p-card p1">Equipa 1: 10</div>
+            <div id="p2-score" class="p-card p2">Equipa 2: 10</div>
+        </div>
+    </header>
+
+    <div class="board-wrapper">
+        <div id="board" class="hollow-board"></div>
+        <div id="center-dice" class="dice-center">?</div>
+    </div>
+
+    <div class="ui-panel">
+        <div id="event-log" class="log">Aguardando início...</div>
+        <button id="roll-btn" onclick="game.play()">LANÇAR DADO</button>
+    </div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
